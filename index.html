@@ -14,11 +14,9 @@
     <div id="app">
         <h1 class="text-center">EMAIL LIST:</h1>
         <div v-if="emailList.length === 10">
-            <div v-for="(email, i) in emailList">
-                <ul>
-                    <li>{{i + 1}}: {{email}}</li>
-                </ul>
-            </div>
+            <ul v-for="(email, i) in emailList">
+                <li>{{i + 1}}: {{email}}</li>
+            </ul>
         </div>
 
 
