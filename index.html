@@ -14,11 +14,11 @@
     <div id="app">
         <h1 class="text-center">EMAIL LIST:</h1>
         <div v-if="emailList.length === 10">
-            <ul>
+            <ol>
                 <li v-for="(email, i) in emailList">
-                    {{i + 1}}: {{email}}
+                    {{email}}
                 </li>
-            </ul>
+            </ol>
         </div>
 
 

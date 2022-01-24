@@ -15,11 +15,11 @@
         <h1 class="text-center">EMAIL LIST:</h1>
         <div class="d-flex"
             v-if="emailList.length === 10">
-            <ul>
+            <ol>
                 <li v-for="(name, i) in nameList">
-                    {{i + 1}}: {{name}} 
+                    {{name}} 
                 </li>
-            </ul>
+            </ol>
 
             <ul>
                 <li v-for="email in emailList">
