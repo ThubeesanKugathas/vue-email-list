@@ -5,9 +5,12 @@ new Vue({
            
         ],
         counter: 0,
+        active: false,
     },
     methods: {
- 
+        showEmail() {
+            this.active = !this.active;
+        }
     },
     mounted() {
 
@@ -15,7 +18,7 @@ new Vue({
 
             const x = {
                 name: '',
-                email: ''
+                email: '',
             };
             this.list.push(x);
 
@@ -27,7 +30,9 @@ new Vue({
             axios.get('https://flynn.boolean.careers/exercises/api/random/name').then((name) => {
                 this.list[i].name = name.data.response;
                 this.counter++;
+
             });
+
 
         }
     }

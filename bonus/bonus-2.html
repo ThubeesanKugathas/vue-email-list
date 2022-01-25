@@ -15,8 +15,14 @@
         <h1 class="text-center">EMAIL LIST:</h1>
         <div v-if="this.counter === 20">
             <ol>
-                <li v-for="user in list">
-                    {{user.name}}: {{user.email}}
+                <li v-for="(user, i) in list"
+                    class="d-flex">
+                    <div @click="showEmail">
+                        {{user.name}}   
+                    </div>
+                    <div :class="active == true ? 'd-block' : 'd-none'">
+                        :        {{user.email}}
+                    </div>
                 </li>
             </ol>
         </div>
