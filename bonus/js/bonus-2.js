@@ -44,6 +44,7 @@ new Vue({
             },
         ],
         counter: 0,
+        counterList: [],
     },
     methods: {
         
@@ -53,6 +54,7 @@ new Vue({
         for (let i = 0; i < 10; i++) {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((email) => {
                 this.list[i].email = email.data.response;
+                this.counterList.push(email.data.response);
             });
             this.counter++;
 
