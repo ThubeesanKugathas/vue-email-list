@@ -13,13 +13,11 @@
 <body>
     <div id="app">
         <h1 class="text-center">EMAIL LIST:</h1>
-        <div v-if="this.counterList.length === 10">
             <ol>
                 <li v-for="user in list">
                     {{user.name}}: {{user.email}}
                 </li>
             </ol>
-        </div>
 
     </div>
 
