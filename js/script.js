@@ -8,6 +8,7 @@ new Vue({
     methods: {
         getEmail() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((email) => {
+                // verificare nessuna ripetizione delle email
                 if (!this.emailList.includes(email.data.response)) {
                     this.emailList.push(email.data.response);
                 } else {
